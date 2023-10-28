@@ -27,11 +27,11 @@ output, great for demos or terminal recordings.
 
 ### Demo
 
-Here is an autodemo demo, using autodemo!
-It was recorded with [asciinema](https://asciinema.org):
+Here is an autodemo demo, using autodemo! It was recorded with
+[asciinema](https://asciinema.org):
 
 ```sh
 asciinema rec -c "autodemo examples/autodemo-demo.sh" -t "autodemo demo" demo.cast
 ```
 
-[![asciicast](https://asciinema.org/a/8OGS3MOsEyonHJVc6kFW02DL0.svg)](https://asciinema.org/a/8OGS3MOsEyonHJVc6kFW02DL0)
+[![asciicast](https://asciinema.org/a/9ml8xxrZFv8aRWIkF9YRsZPNn.svg)](https://asciinema.org/a/9ml8xxrZFv8aRWIkF9YRsZPNn)

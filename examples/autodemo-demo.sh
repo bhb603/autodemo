@@ -1,4 +1,4 @@
-# `autodemo` is a tool for running scripted demos in the teminal.
+# `autodemo` is a tool for running scripted demos in the terminal.
 
 # ---
 
@@ -23,6 +23,9 @@
 
 autodemo --help
 
+# ---
+
 deno eval -p "Math.sqrt(77)"
 
+# ---
 # Cheers!
