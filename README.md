@@ -24,3 +24,14 @@ The typing speed can be controlled with the `-s, --speed` flag. 1=slow, 2=medium
 
 The final result is a scripted CLI session with real command execution and
 output, great for demos or terminal recordings.
+
+### Demo
+
+Here is an autodemo demo, using autodemo!
+It was recorded with [asciinema](https://asciinema.org):
+
+```sh
+asciinema rec -c "autodemo examples/autodemo-demo.sh" -t "autodemo demo" demo.cast
+```
+
+[![asciicast](https://asciinema.org/a/8OGS3MOsEyonHJVc6kFW02DL0.svg)](https://asciinema.org/a/8OGS3MOsEyonHJVc6kFW02DL0)
