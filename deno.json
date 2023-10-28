@@ -1,0 +1,8 @@
+{
+  "tasks": {
+    "compile": "deno compile --allow-env --allow-read --allow-run -o dist/autodemo ./autodemo.ts",
+    "install": "deno install --allow-env --allow-read --allow-run -f autodemo.ts",
+    "lockfile:update": "deno cache --lock-write autodemo.ts && deno test",
+    "test": "deno test"
+  }
+}
