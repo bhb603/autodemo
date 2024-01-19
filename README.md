@@ -17,7 +17,7 @@ processes it as follows:
 > NOTE: Commands must be on a single line
 
 Lines are printed one character at a time with random pauses to simulate being
-typed by a human.
+typed by a human and provide a more natural viewing experience.
 
 The typing speed can be controlled with the `-s, --speed` flag. 1=slow, 2=medium
 (default), 3=fast... anything >10 is essentially instant.
