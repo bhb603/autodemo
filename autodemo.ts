@@ -62,7 +62,7 @@ async function main(): Promise<void> {
         await printLine(outputPrefix, line + "\n", speed);
       } else {
         await printLine(outputPrefix, line, speed);
-        prompt("");
+        await Deno.stdin.read(new Uint8Array(1));
       }
       await runCommand(
         line,

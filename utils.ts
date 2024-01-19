@@ -29,7 +29,7 @@ function randomDelay(maxMs: number): Promise<void> {
   });
 }
 
-export function runCommand(
+export async function runCommand(
   line: string,
   stdout: WritableStream,
   stderr: WritableStream,
@@ -43,7 +43,7 @@ export function runCommand(
     env,
   });
   const child = cmd.spawn();
-  child.stdout.pipeTo(stdout, { preventClose: true });
-  child.stderr.pipeTo(stderr, { preventClose: true });
+  await child.stdout.pipeTo(stdout, { preventClose: true });
+  await child.stderr.pipeTo(stderr, { preventClose: true });
   return child.status;
 }
