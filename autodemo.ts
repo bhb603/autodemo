@@ -7,6 +7,18 @@ import { VERSION } from "./version.ts";
 
 import { printLine, runCommand } from "./utils.ts";
 
+const USAGE = `autodemo ${VERSION}
+
+  USAGE:
+    autodemo [OPTIONS] <demofile>
+
+  OPTIONS:
+    -h, --help            Print help
+    --env-file <FILE>     Load environment variables from a dotenv file
+    -f, --full-auto       Run without pausing for input
+    -s, --speed <SPEED>   Set the speed of the demo. 1=slowest, 2=medium, 3=fast (default: 2)
+`;
+
 async function main(): Promise<void> {
   const args = parse(Deno.args, {
     string: ["speed", "env-file"],
@@ -16,7 +28,7 @@ async function main(): Promise<void> {
   });
 
   if (args.help) {
-    printUsage();
+    console.log(USAGE);
     Deno.exit(0);
   }
 
@@ -38,7 +50,7 @@ async function main(): Promise<void> {
 
   const demoFile = args._[0];
   if (!demoFile) {
-    printUsage();
+    console.log(USAGE);
     console.error("ERROR: demofile required");
     Deno.exit(1);
   }
@@ -72,20 +84,6 @@ async function main(): Promise<void> {
       );
     }
   }
-}
-
-function printUsage() {
-  console.log(`autodemo ${VERSION}
-
-USAGE:
-  autodemo [OPTIONS] <demofile>
-
-OPTIONS:
-  -h, --help            Print help
-  --env-file <FILE>     Load environment variables from a dotenv file
-  -f, --full-auto       Run without pausing for input
-  -s, --speed <SPEED>   Set the speed of the demo. 1=slowest, 2=medium, 3=fast (default: 2)
-`);
 }
 
 if (import.meta.main) {
