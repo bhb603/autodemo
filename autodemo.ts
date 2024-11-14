@@ -1,7 +1,7 @@
 #!/usr/bin/env -S deno run --allow-env --allow-read --allow-run
 
-import { load } from "https://deno.land/std@0.204.0/dotenv/mod.ts";
-import { parse } from "https://deno.land/std@0.204.0/flags/mod.ts";
+import { load } from "@std/dotenv";
+import { parseArgs } from "@std/cli";
 
 import { VERSION } from "./version.ts";
 
@@ -20,7 +20,7 @@ const USAGE = `autodemo ${VERSION}
 `;
 
 async function main(): Promise<void> {
-  const args = parse(Deno.args, {
+  const args = parseArgs(Deno.args, {
     string: ["speed", "env-file"],
     boolean: ["help", "full-auto"],
     default: { speed: 2 },
