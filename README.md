@@ -14,7 +14,8 @@ processes it as follows:
 - empty lines are ignored
 - all other lines will be run as commands: `sh -c {line}`
 
-> NOTE: Commands must be on a single line
+> [!IMPORTANT]
+> Commands must be on a single line
 
 Lines are printed one character at a time with random pauses to simulate being
 typed by a human and provide a more natural viewing experience.
